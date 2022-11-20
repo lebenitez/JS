@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>PARIMPAR</title>
+</head>
+
+<body>
+    <h1>Quer saber se é par ou ímpar?</h1>
+    Digite um número inteiro: <input type="number" name="txtnum" id="txtnum">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res">Resultado:</div>
+    
+    <script>
+        function verificar() { // Função criada para só entregar o resultado após clicar no botão verificar. 
+            var numInput = window.document.getElementById('txtnum') // Ligando o JS com o HTML (Buscando valores do HTML)
+            var num = Number(numInput.value)
+            
+            function parimp(n) { // Função que calcula se é par ou ímpar
+                if (n%2==0) {
+                return 'Seu número é par!'
+                } else {
+                return 'Seu número é ímpar!'
+                }
+            }
+            
+            var result = parimp(num)
+            res.innerHTML = `O número ${num} é ${result}` // Apresentando o resultado
+        }
+    </script>
+    
+</body>
+</html>

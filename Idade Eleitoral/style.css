@@ -1,0 +1,17 @@
+body {
+    font: normal 18pt Arial;
+}
+
+input {
+    font: normal 18pt Arial;
+    width: 150px;
+}
+
+div#res {
+    margin-top: 20px;
+}
+
+div#hora {
+    margin-top: 20px;
+    font: normal 18pt Arial;
+}

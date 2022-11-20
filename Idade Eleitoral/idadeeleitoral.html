@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>VOTO</title>
+</head>
+
+<body>
+    <h1>Análise de idade eleitoral</h1>
+    Digite sua idade: <input type="number" name="txtidade" id="txtidade"> anos.
+    <input type="button" value="Verificar" onclick="verifica()">
+    <div id="res">Resultado</div>
+    
+    <script>
+        var divHora = window.document.getElementById('hora')
+        var agora = new Date()
+        var hora = agora.getHours()
+        function verifica() {
+            var idadeInput = window.document.getElementById('txtidade') // Ligando o JS com o HTML (Buscando valores do HTML)
+            var idade = Number(idadeInput.value)
+            if (idade < 16) {
+                res.innerHTML = `Com ${idade} anos, você ainda não pode votar!`
+            } else {
+                if (idade < 18 || idade > 65) {
+                    res.innerHTML = `Com ${idade} anos, o voto é opcional!`
+            } else {
+                    res.innerHTML = `Com ${idade} anos, o voto é obrigatório!`
+                    }
+            }
+        }    
+    </script>
+    
+</body>
+</html>
